@@ -1,0 +1,26 @@
+name: NewPipeline
+on:
+  workflow_dispatch:
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: echo message for Git Commands
+      run: echo Executing Git commands...
+      
+    - name: checkout
+      uses: actions/checkout@v4.1.0
+      with:
+        repository: DaggupatiPavan/java-web-app-docker
+        
+    - name: list files after checkout
+      shell: bash
+      run: ls
+      
+    - name: echo message for Build
+      run: echo Building the application...
+      
+    - name: list files during build
+      shell: bash
+      run: ls
