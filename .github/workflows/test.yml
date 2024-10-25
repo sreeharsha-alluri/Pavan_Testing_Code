@@ -9,7 +9,7 @@ jobs:
     - name: echo message for Git Commands
       run: echo Executing Git commands...
       
-    - name: checkout
+    - name: checkout repository
       uses: actions/checkout@v4.1.0
       with:
         repository: DaggupatiPavan/java-web-app-docker
